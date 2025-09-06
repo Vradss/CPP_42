@@ -28,7 +28,7 @@ void Phonebook::addContact(){
 
     if (name.empty() || lastname.empty() || nickname.empty() || phone.empty() || secret.empty())
     {
-        std::cout << "Error : All fields must be filled" << std::endl;
+        std::cout << "Error : All fields must be filled. Try ADD , SEARCH or EXIT" << std::endl;
         return;
     }
 
@@ -44,7 +44,7 @@ void Phonebook::addContact(){
 
     std::cout << "Contact added succesfully!" << std::endl;
     std::cout << "-------------------" << std::endl;
-    std::cout << "What you want to do? Try ADD , SEARCH or EXIT!" << std::endl;
+    std::cout << "What you want to do? Try ADD , SEARCH or EXIT" << std::endl;
 }
 
 
@@ -57,16 +57,21 @@ void Phonebook::searchContact(){
     }
     displayAllContacts();
 
+    std::string input;
     int index;
-    std::cout << "Which contact are you looking for?";
-    std::cin >> index;
-    std::cin.ignore();
 
-    if ( index < 0 || index >= _contactTotal)
-    {
-        std::cout << "There is no contact with that index. Please try ADD, SEARCH or EXIT" << std::endl;
-        return;
+    while (true) {
+    std::cout << "Which contact are you looking for? ";
+    std::getline(std::cin, input);
+    
+    std::stringstream ss(input);
+    if (ss >> index) {
+        if (index >= 0 && index < _contactTotal) {
+            break;
+        }
     }
+    std::cout << "Invalid index. Try again: ";
+}
 
     std::cout << std::endl;
     std::cout << "Contact Information:" << std::endl;

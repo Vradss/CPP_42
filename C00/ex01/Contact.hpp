@@ -13,7 +13,7 @@ private:
 public:
     Contact();
     ~Contact();
-    //setters
+
     void setName(std::string name);
     void setLastName(std::string lastName);
     void setNickName(std::string nickName);
