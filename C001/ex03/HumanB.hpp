@@ -1,0 +1,18 @@
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
+#include "Weapon.hpp"
+#include <iostream>
+#include <string>
+
+class HumanB {
+private:
+    std::string name;
+    Weapon* weapon; // tiene un puntero a weapon porque puede no tener arma 
+public:
+    HumanB(std::string name);
+    ~HumanB();
+    void setWeapon(Weapon& weapon);
+    void attack() const;
+};
+
+#endif

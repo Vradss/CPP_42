@@ -1,0 +1,15 @@
+#include "Zombie.hpp"
+
+int main()
+{
+    int N = 15;
+    Zombie* horde = zombieHorde(N, "Romario");
+
+    for (int i = 0; i < N; i++)
+    {
+        horde[i].announce();
+    }
+
+    delete[] horde; // MUY IMPORTANTE
+    return 0;
+}
