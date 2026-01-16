@@ -7,7 +7,7 @@
 class HumanB {
 private:
     std::string name;
-    Weapon* weapon; // tiene un puntero a weapon porque puede no tener arma 
+    Weapon* weapon;
 public:
     HumanB(std::string name);
     ~HumanB();

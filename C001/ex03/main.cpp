@@ -1,3 +1,8 @@
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include <iostream>
+
 int main()
 {
     {
@@ -13,6 +18,12 @@ int main()
     jim.setWeapon(club);
     jim.attack();
     club.setType("some other type of club");
+    jim.attack();
+    Weapon sword = Weapon("sword");
+    jim.setWeapon(sword);
+    jim.attack();
+    Weapon axe = Weapon("axe");
+    jim.setWeapon(axe);
     jim.attack();
     }
 return 0;

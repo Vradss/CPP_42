@@ -7,10 +7,10 @@
 class HumanA {
 private:
     std::string name;
-    Weapon& weapon; //tiene referencia a weapon porque no puede cambiar a otra arma
+    Weapon& weapon;
 
 public:
-    HumanA(std::string name, Weapon& weapon); //como humanA siempre tiene arma, nos olbiga a usar una referencia.
+    HumanA(std::string name, Weapon& weapon); 
     ~HumanA();
     void attack() const;
 };

@@ -15,12 +15,9 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = human
+NAME = replace
 
-SRCS = HumanA.cpp\
-	HumanB.cpp\
-	Weapon.cpp\
-	main.cpp
+SRCS = main.cpp
 
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
@@ -55,6 +52,7 @@ clean:
 fclean: clean
 	@echo "${RECYCLE_EMOJI} ${YELLOW} Removing executable...${RESET}"
 	@${RM} ${NAME}
+	@${RM} *.replace
 
 re: fclean all
 

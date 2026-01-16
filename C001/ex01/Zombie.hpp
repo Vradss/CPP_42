@@ -8,7 +8,7 @@ private:
     std::string _name;
 
 public:
-    Zombie(); //Nuevo constructor sin parámetros
+    Zombie();
     Zombie(std::string name);
     ~Zombie();
     void announce(void);

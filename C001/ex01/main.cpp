@@ -10,6 +10,6 @@ int main()
         horde[i].announce();
     }
 
-    delete[] horde; // MUY IMPORTANTE
+    delete[] horde;
     return 0;
 }

@@ -15,12 +15,10 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = human
+NAME = harl
 
-SRCS = HumanA.cpp\
-	HumanB.cpp\
-	Weapon.cpp\
-	main.cpp
+SRCS = main.cpp\
+	Harl.cpp
 
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
