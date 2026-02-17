@@ -15,17 +15,19 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = whatever
+NAME = ClapTrap
 
-SRCS = main.cpp
+SRCS = ClapTrap.cpp\
+	main.cpp
+
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 DEPS = $(OBJS:.o=.d)
 
-CC = c++
+CXX = c++
 RM = rm -f
 MKDIR = mkdir -p
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CPPFLAGS = -MMD -MP
 
 all: $(OBJ_DIR) ${NAME}
@@ -35,12 +37,12 @@ $(OBJ_DIR):
 	@echo "${BLUE}Carpeta $(OBJ_DIR) creada${RESET}"
 
 ${NAME}: ${OBJS}
-	@${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+	@${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 	@echo "${SUCCESS_EMOJI} ${GREEN} Successful compilation! ${RESET}"
 
 $(OBJ_DIR)/%.o: %.cpp
 	@echo "${CYAN} Compiling $<...${RESET}"
-	@${CC} ${CFLAGS} ${CPPFLAGS} -c $< -o $@
+	@${CXX} ${CXXFLAGS} $(CPPFLAGS) -c $< -o $@
 
 -include ${DEPS}
 
