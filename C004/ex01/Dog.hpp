@@ -1,10 +1,10 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public AAnimal {
+class Dog : public Animal {
 private:
 	Brain* _brain;
 

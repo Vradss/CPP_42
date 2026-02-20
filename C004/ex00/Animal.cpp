@@ -6,11 +6,11 @@
 /*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 00:39:55 by vrads             #+#    #+#             */
-/*   Updated: 2026/02/20 00:39:56 by vrads            ###   ########.fr       */
+/*   Updated: 2026/02/20 13:09:21 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 
 Animal::Animal() : type("Animal") {
 	std::cout << "[Animal] Default constructor called" << std::endl;

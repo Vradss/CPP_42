@@ -19,7 +19,7 @@ AMateria::AMateria(AMateria const& other) : _type(other._type) {}
 
 AMateria& AMateria::operator=(AMateria const& other) {
 	if (this != &other)
-		; // copying the type doesn't make sense
+		_type = other._type;
 	return *this;
 }
 

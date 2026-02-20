@@ -6,11 +6,11 @@
 /*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 19:40:34 by vrads             #+#    #+#             */
-/*   Updated: 2026/02/20 00:22:44 by vrads            ###   ########.fr       */
+/*   Updated: 2026/02/20 15:06:26 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -38,6 +38,8 @@ int main() {
 	std::cout << wrongCat->getType() << std::endl;
 	wrongCat->makeSound();
 	wrongMeta->makeSound();
+	WrongCat asWrongCat;
+	asWrongCat.makeSound();
 
 	delete wrongMeta;
 	delete wrongCat;
