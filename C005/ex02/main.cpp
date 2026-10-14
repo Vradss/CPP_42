@@ -13,7 +13,7 @@ int main() {
     std::cout << "======== TEST 1: Execute without signing ========" << std::endl;
     {
         Bureaucrat boss("Boss", 1);
-        PresidentialPardonForm pardon("Arthur Dent");
+        PresidentialPardonForm pardon("Lucas");
         //boss.signForm(pardon);
 
         boss.executeForm(pardon);
@@ -22,18 +22,18 @@ int main() {
     std::cout << "\n======== TEST 2: Signed, but executor grade too low ========" << std::endl;
     {
         Bureaucrat boss("Boss", 1);
-        Bureaucrat clerk("Clerk", 140);
+        Bureaucrat vrads("Vrads", 140);
         ShrubberyCreationForm shrub("garden");
 
-        clerk.signForm(shrub);    // 140 <= 145 -> firma
-        clerk.executeForm(shrub); // 140 > 137  -> falla
-        boss.executeForm(shrub);  // 1 <= 137   -> crea garden_shrubbery
+        vrads.signForm(shrub);  
+        vrads.executeForm(shrub);
+        boss.executeForm(shrub);
     }
 
     std::cout << "\n======== TEST 3: Sign fails (grade too low) ========" << std::endl;
     {
         Bureaucrat intern("Intern", 150);
-        RobotomyRequestForm robot("Bender");
+        RobotomyRequestForm robot("Ciboorg");
 
         intern.signForm(robot);
         std::cout << robot << std::endl;
@@ -42,7 +42,7 @@ int main() {
     std::cout << "\n======== TEST 4: Robotomy x4 (50% chance) ========" << std::endl;
     {
         Bureaucrat engineer("Engineer", 45);
-        RobotomyRequestForm robot("Bender");
+        RobotomyRequestForm robot("Ciboorg");
 
         engineer.signForm(robot);
         for (int i = 0; i < 4; i++)
@@ -52,7 +52,7 @@ int main() {
     std::cout << "\n======== TEST 5: Presidential Pardon success ========" << std::endl;
     {
         Bureaucrat president("Zaphod", 5);
-        PresidentialPardonForm pardon("Ford Prefect");
+        PresidentialPardonForm pardon("Audrey Queen");
 
         president.signForm(pardon);
         president.executeForm(pardon);
@@ -65,13 +65,13 @@ int main() {
 
         forms[0] = new ShrubberyCreationForm("home");
         forms[1] = new RobotomyRequestForm("Marvin");
-        forms[2] = new PresidentialPardonForm("Trillian");
+        forms[2] = new PresidentialPardonForm("Lulita");
         for (int i = 0; i < 3; i++) {
             boss.signForm(*forms[i]);
-            boss.executeForm(*forms[i]); // llama al executeAction de cada hija
+            boss.executeForm(*forms[i]);
         }
         for (int i = 0; i < 3; i++)
-            delete forms[i]; // destructor virtual -> se destruye la hija tambien
+            delete forms[i];
     }
 
     return 0;

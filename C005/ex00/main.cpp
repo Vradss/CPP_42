@@ -7,7 +7,6 @@ int main() {
         Bureaucrat Vrads("Vradis", 2);
         std::cout << Vrads << std::endl;
         
-        // Testing grade modification
         Vrads.incrementGrade();
         std::cout << "After promotion: " << Vrads << std::endl;
     }

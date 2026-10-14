@@ -13,7 +13,7 @@ int main() {
 
     std::cout << "======== TEST 1: Subject example (robotomy request) ========" << std::endl;
     {
-        AForm* rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        AForm* rrf = someRandomIntern.makeForm("robotomy request", "Ciboorg");
         if (rrf) {
             std::cout << *rrf << std::endl;
             boss.signForm(*rrf);
@@ -31,7 +31,7 @@ int main() {
             AForm* form = someRandomIntern.makeForm(names[i], "Marvin");
             if (form) {
                 boss.signForm(*form);
-                boss.executeForm(*form); // polimorfismo: executeAction de cada hija
+                boss.executeForm(*form);
                 delete form;
             }
         }
@@ -46,10 +46,10 @@ int main() {
 
     std::cout << "\n======== TEST 4: Intern form, low-grade bureaucrat ========" << std::endl;
     {
-        Bureaucrat clerk("Clerk", 140);
+        Bureaucrat vrads("Vradis", 140);
         AForm* form = someRandomIntern.makeForm("presidential pardon", "Arthur Dent");
         if (form) {
-            clerk.signForm(*form);   // 140 > 25 -> falla
+            vrads.signForm(*form);   // 140 > 25 -> falla
             boss.executeForm(*form); // no firmado -> falla
             delete form;
         }

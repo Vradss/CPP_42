@@ -11,11 +11,9 @@ int main() {
 
         std::cout << taxForm << std::endl;
         
-        // Director (grade 10) attempts to sign form (requires grade 45)
-        // Since 10 <= 45, signing succeeds.
         director.signForm(taxForm);
 
-        std::cout << taxForm << std::endl; // Should display [Signed: Yes]
+        std::cout << taxForm << std::endl;
     }
     catch (const std::exception& e) {
         std::cout << "Unexpected error: " << e.what() << std::endl;
@@ -28,11 +26,9 @@ int main() {
 
         std::cout << topSecretForm << std::endl;
 
-        // Intern (grade 100) attempts to sign form (requires grade 15)
-        // Since 100 > 15, signForm catches GradeTooLowException and prints error reason.
         intern.signForm(topSecretForm);
 
-        std::cout << topSecretForm << std::endl; // Should remain [Signed: No]
+        std::cout << topSecretForm << std::endl;
     }
     catch (const std::exception& e) {
         std::cout << "Unexpected error: " << e.what() << std::endl;
