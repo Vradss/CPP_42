@@ -40,7 +40,6 @@ int main() {
 
     std::cout << "\n======== TEST 3: Invalid Form Grade (Too High: 0) ========" << std::endl;
     try {
-        // Constructor must throw GradeTooHighException
         Form invalidForm("Invalid", 0, 50);
     }
     catch (const std::exception& e) {
@@ -49,7 +48,6 @@ int main() {
 
     std::cout << "\n======== TEST 4: Invalid Form Grade (Too Low: 151) ========" << std::endl;
     try {
-        // Constructor must throw GradeTooLowException
         Form invalidForm2("Invalid2", 50, 151);
     }
     catch (const std::exception& e) {

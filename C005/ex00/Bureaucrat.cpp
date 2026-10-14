@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 13:09:47 by vflorez           #+#    #+#             */
-/*   Updated: 2026/09/14 15:30:21 by vflorez          ###   ########.fr       */
+/*   Updated: 2026/10/14 14:07:10 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Bureaucrat.hpp"
 
 #include "Bureaucrat.hpp"
 
@@ -29,7 +27,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(oth
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) {
     if (this != &other) {
-        // _name es const, así que solo podemos copiar el _grade
         this->_grade = other._grade;
     }
     return *this;

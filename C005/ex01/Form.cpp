@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 15:34:00 by vflorez           #+#    #+#             */
-/*   Updated: 2026/09/14 16:36:46 by vflorez          ###   ########.fr       */
+/*   Updated: 2026/10/14 14:07:17 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Form::Form(const Form& other)
 
 Form& Form::operator=(const Form& other) {
     if (this != &other) {
-        this->_isSigned = other._isSigned; // Las variables const no se pueden reasignar
+        this->_isSigned = other._isSigned;
     }
     return *this;
 }
