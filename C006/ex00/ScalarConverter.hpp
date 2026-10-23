@@ -51,9 +51,9 @@ class ScalarConverter {
     public:
         static void convert(const std::string& literal);
         
-    };
+};
 
-    //Solo sirve para imprimir un objeto, pero no estamos creando objetos, entonces no sirve.
-    //std::ostream& operator<<(std::ostream& out, const ScalarConverter& n);  
+//Solo sirve para imprimir un objeto, pero no estamos creando objetos, entonces no sirve.
+//std::ostream& operator<<(std::ostream& out, const ScalarConverter& n);  
 
 #endif

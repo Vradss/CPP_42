@@ -16,7 +16,7 @@
 
 ScalarConverter::ScalarConverter() {}
 ScalarConverter::ScalarConverter(const ScalarConverter& other){
-        (void)other;
+    (void)other;
 }
 
 ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other){
@@ -47,17 +47,17 @@ bool ScalarConverter::isChar(const std::string& s){
 bool ScalarConverter::isInt(const std::string& n)
 {
     if (n.empty())
-    return false;
+        return false;
 
     size_t i  = 0;
     if ( n[i] == '+' || n[i] == '-')
-    i++;
+        i++;
     if ( i == n.length())
-    return false;
+        return false;
     while ( i < n.length())
     {
         if ( !std::isdigit(n[i]))
-        return false;
+            return false;
         i++;
     }
     return true;
@@ -65,23 +65,23 @@ bool ScalarConverter::isInt(const std::string& n)
 
 bool ScalarConverter::isDouble(const std::string& d){
     if (d.empty())
-    return false;
+        return false;
 
     size_t i = 0;
     int dots = 0;
     bool hasDigits = false;
 
     if ( d[i] == '+' || d[i] == '-')
-    i++;
+        i++;
 
     while ( i < d.length())
     {
         if ( d[i] == '.')
-        dots++;
+            dots++;
         else if (std::isdigit(d[i]))
-        hasDigits = true;
+            hasDigits = true;
         else
-        return false;
+            return false;
         i++;
     }
     return (dots == 1 && hasDigits );
@@ -89,10 +89,10 @@ bool ScalarConverter::isDouble(const std::string& d){
 
 bool ScalarConverter::isFloat(const std::string& f){
     if (f.empty())
-    return false;
+        return false;
 
     if (f[f.length() - 1] != 'f')
-    return false;
+        return false;
 
     return( isDouble(f.substr(0, f.length() - 1)));
 
