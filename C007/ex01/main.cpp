@@ -6,7 +6,7 @@
 /*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:34:13 by vrads             #+#    #+#             */
-/*   Updated: 2026/11/04 15:34:14 by vrads            ###   ########.fr       */
+/*   Updated: 2026/11/04 16:38:09 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 #include "Iter.hpp"
 #include <string>
 
-// funcion normal, recibe const ref (solo lee)
+
 void printInt(const int &n)
 {
     std::cout << n << " ";
 }
 
-// funcion normal, recibe ref NO const (modifica el elemento real)
 void increment(int &num)
 {
     num++;
 }
 
-// funcion normal sobre strings, modifica
 void addExclamation(std::string &s)
 {
     s += "!";

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Template.hpp                                       :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 13:24:40 by vrads             #+#    #+#             */
-/*   Updated: 2026/11/03 10:51:16 by vrads            ###   ########.fr       */
+/*   Updated: 2026/11/04 16:34:59 by vrads            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@
 template <typename T>
 void swap(T &x, T &y )
 {
-    T tmp;
-    tmp = x;
+    T tmp = x;
     x = y;
     y = tmp;
 }
@@ -32,8 +31,7 @@ const T &min(const T &x, const T &y)
 {
     if ( x >= y)
         return y;
-    else
-        return x;
+    return x;
 }
 
 template <typename T>
