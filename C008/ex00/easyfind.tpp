@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easyfind.tpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vrads <vrads@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/04 18:00:00 by vrads             #+#    #+#             */
+/*   Updated: 2026/11/04 18:00:00 by vrads            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+template <typename T>
+typename T::iterator easyfind(T& container, int value)
+{
+    typename T::iterator it = std::find(container.begin(), container.end(), value);
+
+    if (it == container.end())
+        throw NotFoundException();
+    return it;
+}
+
+template <typename T>
+typename T::const_iterator easyfind(const T& container, int value)
+{
+    typename T::const_iterator it = std::find(container.begin(), container.end(), value);
+
+    if (it == container.end())
+        throw NotFoundException();
+    return it;
+}
